@@ -29,7 +29,7 @@
       aria-disabled={{ember-power-select-true-string-if-present opt.disabled}}
       aria-current="{{eq opt select.highlighted}}"
       data-option-index="{{groupIndex}}{{index}}"
-      role="option">
+      role={{if (eq opt select.highlighted) "alert" "option"}}>
       {{yield opt select}}
     </li>
   {{/if}}
